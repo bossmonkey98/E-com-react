@@ -1,0 +1,224 @@
+:root{
+    --primary-color:red;
+    --secondary-color:rgb(245, 245, 245);
+    --bg-color:rgba(37, 37, 37, 0.589);
+    --bg-colour:rgba(37, 37, 37, 0.589);
+}
+
+*{  
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: var(--primary-color);
+    font-size: 3rem !important;
+}
+
+body{
+    cursor: context-menu;
+    scroll-behavior:smooth;
+    height: 100vh;
+    background-image: url(../../assets/images/bg-red.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+    color: var(--secondary-color);
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: fit-content 100% 100%;
+    grid-template-areas: "navigation"
+    "home-content"
+    "footer";
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+@media only screen and (max-width:800px){
+    .nav-bar{
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+}
+.nav-bar{
+    padding: 10px;
+    display:grid;
+    grid-auto-flow: row;
+    grid-template-columns:1.5fr 1fr 2fr;
+    grid-template-areas: "logo menus search-icons";
+    height: fit-content;
+    background-color: var(--bg-color);
+    grid-area: navigation;
+    border-bottom:1px solid var(--primary-color);
+    border-top:1px solid var(--primary-color);
+    border-radius: 0;
+}
+
+.logo{
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#store-logo{
+    height: 4rem;
+    width: 5rem;
+}
+
+@media only screen and (max-width:800px) {
+    #store-name {
+        display: none !important;
+    }
+}
+
+
+#store-name{
+    color:var(--secondary-color);
+    font-size: 3.5rem;
+    color:var(--primary-color)
+}
+
+@media only screen and (max-width:800px) {
+    .menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start !important;
+        align-items: center;
+    }
+}
+
+.menu{
+    grid-area: menus;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.menu>span>a{
+    margin: 10px;
+    font-size: large;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.menu>span>a:hover{
+    color: var(--primary-color);
+}
+
+.nav-content{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    grid-area: search-icons;
+}
+
+.cart-icon , .wishlist-icon, .user-icon{
+    font-size: 2rem;
+    margin: 8px;
+    padding: 4px;
+}
+
+i{
+    color:var(--primary-color);
+    font-size: larger;
+}
+
+.query{
+    width: 60%;
+    max-width: 60%;
+    margin: 8px;
+    padding: 8px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.home-page-content{
+    height:100%;
+    grid-area: home-content;
+}
+.home-page-img{
+    width:100%
+}
+
+.promotion-img{
+    width: 100%;
+}
+
+.home-page-footer{
+    grid-area: footer;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-end;
+    padding: 1rem;
+    width: 100%;
+    border-top: 1px solid var(--primary-color);
+}
+
+.products-title{
+    font-family:Agency ;
+}
+
+.home-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.vertical-card{ 
+    flex-grow: 1;
+    max-width: 17rem;
+    margin: 10px;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.card-badge{
+    background-color: var(--primary-color);
+    color: aliceblue;
+    top: 15px;
+    left: 15px;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.vertical-card-content{
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.social-icons{
+    margin: 10px;
+    padding: 10px;
+}
+
+.social-icons>span>i{
+    padding: 10px;
+}
+
+.subscribe{
+    color: var(--primary-color);
+    margin-top:3rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 20rem;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe>input{
+    margin-top: 1rem;
+    width: 50%;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
